@@ -2,80 +2,158 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siphokazi Muhauli | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+    <title>Cv-project</title>
 </head>
 
 <body>
-
     <div class="container">
-        <header>
-            <div class="header-content">
-                <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
-                <div>
-                    <h1>Siphokazi Naledi Muhauli</h1>
-                    <p class="title">Full Stack Developer </p>
-                    <a href="resume.pdf" download class="btn">📄 Download CV</a>
-                </div>
-            </div>
-        </header>
+        <!-- left side section  -->
+        <div class="left">
+            <img src="profile.jpg" alt="Siphokazi" title="This is an image">
+            <h3>
+                Contact
+            </h3>
+            <ul class="contact">
+                <li> <i class="fas fa-phone"></i> <span class="number">+27 73 615 5924
+                    </span></li>
+                <li><i class="fas fa-envelope"> </i> <a
+                        href="mailto:naledimuhuali@gmail.com">naledimuhauli@gmail.com</a>
+                </li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siphokazi-muhauli-1602912b3/"
+                        target="_blank"> linkedin/Siphokazi</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/naledimuhauli"
+                        target="_blank">github/naledimuhauli</a></li>
+            </ul>
+            <!-- education section  -->
+            <h3>Education</h3>
+            <ul class="education">
+                <li>
+                    <p>
+                        <span class="date">2023-2024</span>
+                        <br>
+                        SheCodes- Front-End Development
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span class="date">2024-2025</span>
+                        <br>
+                        Melsoft Academy- Software Engineering
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span class="date"> current</span>
+                        <br>
+                        Dynamic DNA - Systems Development
+                    </p>
+                </li>
+            </ul>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <h3>
+                Skills
+            </h3>
+            <ul>
+                <li> HTML & CSS</li>
+                <li> JavaScript</li>
+                <li> React </li>
+                <li> Node.js & Express.js</li>
+                <li> MySQL</li>
+                <li> Next.js</li>
+                <li> Git & GitHub</li>
+            </ul>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a software engineer with a passion for building impactful, high-performance applications that solve
+            <h3>Projects</h3>
+            <ul class="projects">
+                <li>AI Chatbot</li>
+                <li>Crypto App</li>
+                <li>Blog Website</li>
+                <li>Ticket booking system</li>
+            </ul>
+        </div>
+        <!-- right side section  -->
+        <div class="right">
+            <h1><strong>Siphokazi</strong> Muhauli</h1>
+            <h2>Full-Stack Developer</h2>
+            <h3>
+                Profile
+                <hr>
+            </h3>
+            <p class="paragraph">I am a software engineer with a passion for building impactful, high-performance
+                applications that solve
                 real-world problems. With expertise in front-end and back-end development, I specialize in creating
                 seamless, scalable, and user-focused solutions. <br>
 
                 I recently completed an intensive software engineering program at Melsoft Academy, where I mastered
                 full-stack development technologies, including Node.js, Express.js, and RESTful APIs. My training
                 emphasized designing robust systems, optimizing performance, and delivering exceptional user
-                experiences.</p>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Melsoft Academy</strong> – Software Engineering</li>
-                <li><strong>SheCodes</strong> – Front-End Development</li>
-                <li><strong>Dynamic DNA</strong> – Systems Development (current)</li>
-                <li><strong>edX</strong> – Introduction to Computer Science (CS50)</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>FaceTrace</strong> – Facial recognition OSINT tool with real-time webcam scanning, reverse
-                    image search, and a map-based UI.</li>
-                <li><strong>Crypto App</strong> – A real-time cryptocurrency tracker showing price data, charts, and
-                    market trends using APIs and interactive UI.</li>
-                <li><strong>Code Quest</strong> – Web platform teaching coding basics to kids through gamified lessons
-                    and interactive challenges.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:naledimuhauli@gmail.com">naledimuhauli@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/naledimuhauli" target="_blank">github.com/naledimuhauli</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/siphokazi-muhauli-1602912b3/" target="_blank">Siphokazi
-                    Muhauli</a></p>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Siphokazi Naledi Muhauli. Designed with 💻 & ☕</p>
-        </footer>
+                experiences.
+            </p>
+            <h3>
+                Work Experience
+                <hr>
+            </h3>
+            <div class="experience">
+                <div>CodSoft</div>
+                <span>Oct 2024 - Nov 2024</span>
+                <div>Web Developer Intern</div>
+                <ul>
+                    <li> As a Web Developer Intern at CodSoft, I contributed to building responsive and interactive
+                        websites using HTML, CSS, JavaScript, and React.</li>
+                    <li>I gained hands-on experience working with APIs, improving UI/UX.</li>
+                    <li> This internship enhanced my skills in front-end development and helped me understand real-world
+                        software development workflows. </li>
+                </ul>
+            </div>
+            <div class="experience">
+                <div>Reality AI Lab</div>
+                <span>Dec 2024 - Feb 2025</span>
+                <div>Software Developer</div>
+                <ul>
+                    <li>
+                        As a Software Developer at Reality AI Lab, I contributed to designing and optimizing the
+                        full-stack architecture for Marvel AI, an AI-powered Teaching Assistant, and Sky AI, an
+                        AI-driven Career Coach.
+                    </li>
+                    <li>My work centered on developing user-friendly, scalable tools for education and career guidance.
+                    </li>
+                </ul>
+            </div>
+            <div class="experience">
+                <div>Freelancer</div>
+                <span>Jun 2024 - Present</span>
+                <div>Web Developer</div>
+                <ul>
+                    <li>Providing frontend development services for clients across various industries. </li>
+                    <li>Specializing in creating responsive, user-friendly interfaces using HTML, CSS, JavaScript, and
+                        React, with a focus on clean, maintainable code.</li>
+                    <li> Collaborating with clients to translate design concepts into functional web applications and
+                        ensuring cross-browser compatibility and optimized performance. </li>
+                </ul>
+            </div>
+            <h3>
+                Reference
+            </h3>
+            <hr>
+            <p>Available upon request.</p>
+        </div>
     </div>
-
 </body>
 
 </html>

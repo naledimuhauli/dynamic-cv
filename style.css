@@ -1,135 +1,157 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    background-color: #f7f9fc;
-    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1000px;
+    border: 3px solid #1e3a8a;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-
-header {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 2rem;
+.left {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
+.left img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid #007bff;
+    border: 5px solid #fff;
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.title {
-    font-size: 1rem;
-    color: #666;
-    margin: 0.5rem 0;
+.left h3 {
+    margin-top: 1.5rem;
+    font-size: 25px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    text-align: left;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background: #007bff;
+.left ul {
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.left .contact {
+    list-style: none;
+}
+
+.left ul li {
+    margin: 10px 0;
+}
+
+.left a {
     color: #fff;
     text-decoration: none;
-    border-radius: 6px;
-    margin-top: 0.5rem;
 }
 
-.btn:hover {
-    background: #0056b3;
-}
-
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: 500;
-}
-
-nav a:hover {
+.left a:hover {
     text-decoration: underline;
 }
 
-
-section {
-    margin-bottom: 2.5rem;
+/* Right Side */
+.right {
+    padding: 30px;
+    font-size: 18px;
 }
 
-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.right h1 {
+    font-size: 35px;
+    margin-bottom: 0;
+    color: #1e3a8a;
+}
+
+.right h2 {
+    font-size: 25px;
+    margin-top: 5px;
+    color: #1e3a8a;
+}
+
+.right h2::after {
+    content: '';
+    display: block;
+    width: 2cm;
+    height: 3px;
+    background-color: #1e3a8a;
+    margin-top: 5px;
+}
+
+.right h3 {
+    margin-top: 30px;
+    font-size: 25px;
+    color: #1e3a8a;
+}
+
+.right hr {
+    border: none;
+    border-top: 2px solid #1e3a8a;
+    margin: 10px 0;
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 1.6;
     color: #333;
-    border-bottom: 2px solid #007bff;
+}
+
+.experience {
+    margin-bottom: 20px;
+}
+
+.experience>div:first-child {
+    font-weight: bold;
     display: inline-block;
-    padding-bottom: 0.3rem;
+    width: 50%;
+    color: #1e3a8a;
 }
 
-section p,
-section ul {
-    margin-top: 0.5rem;
+.experience>span {
+    float: right;
+    color: #555;
 }
 
-ul {
-    list-style: disc;
-    padding-left: 1.5rem;
+.experience ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    color: #333;
+    font-size: 14px;
 }
 
-a {
-    color: #007bff;
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
-
-
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-    border-top: 1px solid #ddd;
-    padding-top: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
+    .left,
+    .right {
         text-align: center;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 0.5rem;
+    .experience>div:first-child,
+    .experience>span {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .experience>span {
+        float: none;
     }
 }
