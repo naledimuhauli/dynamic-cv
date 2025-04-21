@@ -213,8 +213,10 @@ footer {
 }
 
 .project-info h3 {
-    margin-top: 0.5rem;
+    margin-top: 0.9rem;
     color: var(--primary);
+    align-items: center;
+    text-align: center;
 }
 
 .project-links {
@@ -222,6 +224,8 @@ footer {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
 }
 
 .project-links a {
@@ -231,6 +235,8 @@ footer {
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     transition: background 0.3s;
+    align-items: center;
+    text-align: center;
 }
 
 .project-links a:hover {
@@ -633,8 +639,21 @@ header {
 }
 
 .services {
-    padding: 60px 20px;
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    text-align: center;
 }
+
+/* .services {
+    padding: 60px 20px;
+} */
 
 .section-header {
     text-align: center;
@@ -683,17 +702,17 @@ header {
 
 
 /* Education and Experience Section Styles */
-section {
+section .projects {
     margin: 3rem auto;
     padding: 2rem;
-    max-width: 800px;
+    /* max-width: 800px; */
     background: transparent;
     border-radius: 0;
     box-shadow: none;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease-out forwards;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -703,13 +722,22 @@ section h2 {
     text-align: center;
 }
 
-.education-list,
-.experience-list {
+.education-list {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    /* two columns */
     gap: 2rem;
     margin-top: 1rem;
 }
+
+/* Already included, but important for smaller screens */
+@media screen and (max-width: 768px) {
+    .education-list {
+        grid-template-columns: 1fr;
+        /* one column on mobile */
+    }
+}
+
 
 .education-item,
 .experience-item {
@@ -749,5 +777,91 @@ section h2 {
     .education-list,
     .experience-list {
         grid-template-columns: 1fr;
+    }
+}
+
+.contact-section {
+    padding: 4rem 1rem;
+    background: var(--background);
+    max-width: 1200px;
+    align-items: right;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-box .icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-right: 1rem;
+}
+
+.contact-box .text p {
+    margin: 0;
+}
+
+.contact-box .text a {
+    text-decoration: none;
+    color: #7dd3fc;
+}
+
+.contact-box .text span {
+    font-weight: bold;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .contact-row {
+        flex-direction: column;
     }
 }
