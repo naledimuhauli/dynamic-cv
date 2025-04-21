@@ -2,158 +2,143 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet">
-    <title>Cv-project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siphokazi | Software Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <!-- left side section  -->
-        <div class="left">
-            <img src="profile.jpg" alt="Siphokazi" title="This is an image">
-            <h3>
-                Contact
-            </h3>
-            <ul class="contact">
-                <li> <i class="fas fa-phone"></i> <span class="number">+27 73 615 5924
-                    </span></li>
-                <li><i class="fas fa-envelope"> </i> <a
-                        href="mailto:naledimuhuali@gmail.com">naledimuhauli@gmail.com</a>
-                </li>
-                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siphokazi-muhauli-1602912b3/"
-                        target="_blank"> linkedin/Siphokazi</a></li>
-                <li><i class="fab fa-github"></i> <a href="https://github.com/naledimuhauli"
-                        target="_blank">github/naledimuhauli</a></li>
-            </ul>
-            <!-- education section  -->
-            <h3>Education</h3>
-            <ul class="education">
-                <li>
-                    <p>
-                        <span class="date">2023-2024</span>
-                        <br>
-                        SheCodes- Front-End Development
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <span class="date">2024-2025</span>
-                        <br>
-                        Melsoft Academy- Software Engineering
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <span class="date"> current</span>
-                        <br>
-                        Dynamic DNA - Systems Development
-                    </p>
-                </li>
-            </ul>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-            <h3>
-                Skills
-            </h3>
-            <ul>
-                <li> HTML & CSS</li>
-                <li> JavaScript</li>
-                <li> React </li>
-                <li> Node.js & Express.js</li>
-                <li> MySQL</li>
-                <li> Next.js</li>
-                <li> Git & GitHub</li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Siphokazi.</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
             </ul>
+        </nav>
 
-            <h3>Projects</h3>
-            <ul class="projects">
-                <li>AI Chatbot</li>
-                <li>Crypto App</li>
-                <li>Blog Website</li>
-                <li>Ticket booking system</li>
-            </ul>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Siphokazi Muhauli</h1>
+                <p class="typing-text"></p>
+            </div>
+            <div class="hero-image">
+                <img src="images/me1.png" alt="Profile">
+            </div>
         </div>
-        <!-- right side section  -->
-        <div class="right">
-            <h1><strong>Siphokazi</strong> Muhauli</h1>
-            <h2>Full-Stack Developer</h2>
-            <h3>
-                Profile
-                <hr>
-            </h3>
-            <p class="paragraph">I am a software engineer with a passion for building impactful, high-performance
-                applications that solve
-                real-world problems. With expertise in front-end and back-end development, I specialize in creating
-                seamless, scalable, and user-focused solutions. <br>
+    </header>
 
-                I recently completed an intensive software engineering program at Melsoft Academy, where I mastered
-                full-stack development technologies, including Node.js, Express.js, and RESTful APIs. My training
-                emphasized designing robust systems, optimizing performance, and delivering exceptional user
-                experiences.
-            </p>
-            <h3>
-                Work Experience
-                <hr>
-            </h3>
-            <div class="experience">
-                <div>CodSoft</div>
-                <span>Oct 2024 - Nov 2024</span>
-                <div>Web Developer Intern</div>
-                <ul>
-                    <li> As a Web Developer Intern at CodSoft, I contributed to building responsive and interactive
-                        websites using HTML, CSS, JavaScript, and React.</li>
-                    <li>I gained hands-on experience working with APIs, improving UI/UX.</li>
-                    <li> This internship enhanced my skills in front-end development and helped me understand real-world
-                        software development workflows. </li>
-                </ul>
-            </div>
-            <div class="experience">
-                <div>Reality AI Lab</div>
-                <span>Dec 2024 - Feb 2025</span>
-                <div>Software Developer</div>
-                <ul>
-                    <li>
-                        As a Software Developer at Reality AI Lab, I contributed to designing and optimizing the
-                        full-stack architecture for Marvel AI, an AI-powered Teaching Assistant, and Sky AI, an
-                        AI-driven Career Coach.
-                    </li>
-                    <li>My work centered on developing user-friendly, scalable tools for education and career guidance.
-                    </li>
-                </ul>
-            </div>
-            <div class="experience">
-                <div>Freelancer</div>
-                <span>Jun 2024 - Present</span>
-                <div>Web Developer</div>
-                <ul>
-                    <li>Providing frontend development services for clients across various industries. </li>
-                    <li>Specializing in creating responsive, user-friendly interfaces using HTML, CSS, JavaScript, and
-                        React, with a focus on clean, maintainable code.</li>
-                    <li> Collaborating with clients to translate design concepts into functional web applications and
-                        ensuring cross-browser compatibility and optimized performance. </li>
-                </ul>
-            </div>
-            <h3>
-                Reference
-            </h3>
-            <hr>
-            <p>Available upon request.</p>
+
+
+
+    <section class="about hidden">
+        <h2>About Me</h2>
+        <p>
+            Passionate about building scalable software, solving real-world problems,
+            and creating seamless user experiences.
+        </p>
+    </section>
+
+    <section class="skills hidden">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div><i class="fab fa-html5"></i> HTML</div>
+            <div><i class="fab fa-css3-alt"></i> CSS</div>
+            <div><i class="fab fa-js-square"></i> JavaScript</div>
+            <div><i class="fab fa-react"></i> React</div>
+            <div><i class="fab fa-node-js"></i> Node.js</div>
+            <div><i class="fas fa-database"></i> SQL</div>
         </div>
-    </div>
+    </section>
+    <!-- Education Section -->
+    <section class="education hidden">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Melsoft Academy</h3>
+                <p><em>Software Engineering Graduate</em></p>
+                <p class="year">2019 - 2023</p>
+                <p>Description of your coursework, relevant skills, or honors here.</p>
+            </div>
+            <div class="education-item">
+                <h3>SheCodes</h3>
+                <p><em>Front-End Development</em></p>
+                <p class="year">2020</p>
+                <p>Description of your training or key projects here.</p>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience hidden">
+        <h2>Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>Reality AI Lab</h3>
+                <p><em>Software Developer</em></p>
+                <p class="year">2023 - Present</p>
+                <p>Description of what you do, key projects, and skills used here.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Freelancer</h3>
+                <p><em>Full-Stack Developer</em></p>
+                <p class="year">2022 - 2023</p>
+                <p>Worked on projects such as [examples], focusing on [technologies].</p>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+
+
+    <section class="projects hidden">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="images/facetrace.png" alt="FaceTrace Project Screenshot">
+                <div class="project-info">
+                    <h3>FaceTrace</h3>
+                    <p>Facial recognition OSINT tool with real-time detection and analytics.</p>
+                    <div class="project-links">
+                        <a href="https://facetrace-live-demo.com" target="_blank">Live Demo</a>
+                        <a href="https://github.com/yourusername/facetrace" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/crypto-tracker.png" alt="Crypto Tracker Project Screenshot">
+                <div class="project-info">
+                    <h3>Crypto Tracker</h3>
+                    <p>Live crypto price tracking app with React and CoinGecko API.</p>
+                    <div class="project-links">
+                        <a href="https://crypto-tracker-demo.com" target="_blank">Live Demo</a>
+                        <a href="https://github.com/yourusername/crypto-tracker" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact hidden">
+        <h2>Contact</h2>
+        <p>Email: janedoe@example.com</p>
+        <p>LinkedIn: linkedin.com/in/janedoe</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jane Doe</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
