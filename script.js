@@ -69,8 +69,8 @@ window.addEventListener("load", () => {
 const roles = [
     "Software Engineer",
     "Full-Stack Developer",
+    "Front-end Developer",
     "React | Node | SQL",
-    "Cybersecurity Enthusiast",
 ];
 
 let typingText = document.querySelector(".typing-text");

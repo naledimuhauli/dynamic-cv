@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Siphokazi | Software Engineer</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,22 +41,138 @@
     <section class="about hidden">
         <h2>About Me</h2>
         <p>
-            Passionate about building scalable software, solving real-world problems,
-            and creating seamless user experiences.
+            I'm a Software Engineer passionate about transforming ideas into interactive, user-focused web applications.
+            Skilled in HTML, CSS, JavaScript, React, and Node.js, I create seamless, intuitive projects—from e-commerce
+            sites to real-time weather apps. Crafting responsive, efficient code is my creative outlet, and I'm
+            constantly exploring new techniques to advance my skills.
         </p>
+        <a href="software engineer cv.pdf" download class="btn btn-primary mt-3" target="_blank">Download CV</a>
     </section>
 
-    <section class="skills hidden">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div><i class="fab fa-html5"></i> HTML</div>
-            <div><i class="fab fa-css3-alt"></i> CSS</div>
-            <div><i class="fab fa-js-square"></i> JavaScript</div>
-            <div><i class="fab fa-react"></i> React</div>
-            <div><i class="fab fa-node-js"></i> Node.js</div>
-            <div><i class="fas fa-database"></i> SQL</div>
+    <section id="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <div class="skill-percentage">95%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <div class="skill-percentage">75%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <div class="skill-percentage">75%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>React</h3>
+                    <div class="skill-percentage">70%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Node.js / Express.js</h3>
+                    <div class="skill-percentage">75%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <div class="skill-percentage">80%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Service Start -->
+    <section class="services" id="service">
+        <div class="container">
+            <div class="section-header">
+                <p>What I do</p>
+                <h2>Awesome Quality Services</h2>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Front-end Development</h3>
+                        <p>
+                            Specializing in creating responsive, user-friendly interfaces using HTML, CSS, JavaScript,
+                            and React. I prioritize clean, maintainable code to bring client designs to life.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Fullstack Development</h3>
+                        <p>
+                            Proficient in both front-end and back-end technologies, allowing for seamless integration of
+                            client requirements and optimized performance across web applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Database Management</h3>
+                        <p>
+                            Skilled in designing and managing databases to ensure data integrity, security, and
+                            efficiency, with experience in MySQL.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>API Development</h3>
+                        <p>
+                            Experienced in building and integrating RESTful APIs to enable efficient communication
+                            between applications, ensuring secure, scalable, and well-documented endpoints.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Service End -->
+
     <!-- Education Section -->
     <section class="education hidden">
         <h2>Education</h2>
@@ -63,36 +180,90 @@
             <div class="education-item">
                 <h3>Melsoft Academy</h3>
                 <p><em>Software Engineering Graduate</em></p>
-                <p class="year">2019 - 2023</p>
-                <p>Description of your coursework, relevant skills, or honors here.</p>
+                <p class="year">2024 - 2025</p>
+                <p>
+                <ul>
+                    <li>Completed a 6-month intensive program covering front-end and back-end development.</li>
+                    <li>Gained hands-on experience with HTML, CSS, JavaScript, React, Node.js, Express.js, SQL,
+                        and Git.</li>
+                    <li>Built real-world projects applying clean code principles, RESTful API architecture, and modern
+                        UI/UX design.</li>
+                </ul>
+
+                <h4>Projects built during the course:</h4>
+                <ul>
+                    <li><strong>AI Chatbot:</strong> Developed a smart chatbot capable of natural language processing
+                        for real-time user interaction and support. Integrated with a Node.js backend and deployed with
+                        a clean, responsive React frontend.</li>
+                    <li><strong>Crypto App:</strong> Created a dynamic crypto tracker that fetches real-time
+                        cryptocurrency data. Implemented features like live pricing, search and filtering, and trend
+                        analytics using React, REST APIs, and charting libraries.</li>
+                </ul>
+                </p>
             </div>
             <div class="education-item">
                 <h3>SheCodes</h3>
                 <p><em>Front-End Development</em></p>
-                <p class="year">2020</p>
-                <p>Description of your training or key projects here.</p>
+                <p class="year">2023 - 2024</p>
+                <p>
+                <ul>
+                    <li>Learned the fundamentals of front-end development using HTML, CSS, JavaScript, and responsive
+                        design principles.</li>
+                    <li>Improved skills in debugging, styling, and creating interactive components using vanilla JS.
+                    </li>
+                </ul>
+
+                <h4>Projects built during the workshop:</h4>
+                <ul>
+                    <li><strong>Weather App:</strong> A real-time weather forecast application that uses OpenWeather API
+                        to display current and future conditions based on user location or search.</li>
+                    <li><strong>Personal Portfolio:</strong> A responsive and interactive portfolio website showcasing
+                        personal projects, skills, and contact information with animated transitions and clean layout.
+                    </li>
+                </ul>
+                </p>
             </div>
-            <!-- Add more items as needed -->
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="experience hidden">
-        <h2>Experience</h2>
-        <div class="experience-list">
-            <div class="experience-item">
-                <h3>Reality AI Lab</h3>
-                <p><em>Software Developer</em></p>
-                <p class="year">2023 - Present</p>
-                <p>Description of what you do, key projects, and skills used here.</p>
+    <!-- Experience Section -->
+    <section id="experience" class="timeline-section">
+        <h2 class="section-title">💼 Experience</h2>
+        <div class="timeline-container">
+
+            <!-- Left Side Job -->
+            <div class="timeline-block left">
+                <div class="content">
+                    <h3>Software Developer — Reality AI Lab</h3>
+                    <p class="exp-date">2024 – Present</p>
+                    <p>
+                        Contributed to Marvel AI (AI Teaching Assistant) and Sky AI (AI Career Coach).
+                    </p>
+                    <ul>
+                        <li><strong>Full-Stack:</strong> ReactJS, Node.js, Python.</li>
+                        <li><strong>Cloud:</strong> Deployed on Google Cloud Run.</li>
+                        <li><strong>Databases:</strong> Firestore, Firebase Realtime DB, Redis.</li>
+                        <li><strong>Tools:</strong> LogRocket, GitHub Actions, CI/CD.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experience-item">
-                <h3>Freelancer</h3>
-                <p><em>Full-Stack Developer</em></p>
-                <p class="year">2022 - 2023</p>
-                <p>Worked on projects such as [examples], focusing on [technologies].</p>
+
+            <!-- Right Side Job -->
+            <div class="timeline-block right">
+                <div class="content">
+                    <h3>Front-End Developer — SheCodes</h3>
+                    <p class="exp-date">2023</p>
+                    <p>
+                        Completed front-end certification and built responsive projects.
+                    </p>
+                    <ul>
+                        <li><strong>Projects:</strong> Weather App, Personal Portfolio.</li>
+                        <li><strong>Skills:</strong> HTML, CSS, JavaScript, UI/UX fundamentals.</li>
+                    </ul>
+                </div>
             </div>
-            <!-- Add more items as needed -->
+
         </div>
     </section>
 
