@@ -15,53 +15,73 @@ const observer = new IntersectionObserver((entries) => {
 });
 hiddenElements.forEach(el => observer.observe(el));
 
-// 🔥 Weather Alert Feature
+/// 🔥 Weather Alert Feature (with fallback)
 window.addEventListener("load", () => {
-    if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(
-            async position => {
-                const lat = position.coords.latitude;
-                const lon = position.coords.longitude;
-                const apiKey = "4280ca7c1e5c3e22163f1e4af1525184";
-                const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    const apiKey = "4280ca7c1e5c3e22163f1e4af1525184";
 
-                try {
-                    const res = await fetch(apiURL);
-                    const data = await res.json();
-                    const city = data.name;
-                    const temp = data.main.temp;
-                    const weather = data.weather[0].description;
+    function showWeather(lat, lon) {
+        const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+        fetch(apiURL)
+            .then(res => res.json())
+            .then(data => {
+                const city = data.name;
+                const temp = data.main.temp;
+                const weather = data.weather[0].description;
 
-                    const weatherBox = document.createElement("div");
-                    weatherBox.className = "weather-toast";
-                    weatherBox.innerHTML = `
+                console.log(`📍 Location: ${city} (${lat}, ${lon})`);
+
+                const weatherBox = document.createElement("div");
+                weatherBox.className = "weather-toast";
+                weatherBox.innerHTML = `
                     <button class="close-toast">&times;</button>
                     <strong>🌍 You're in ${city}</strong><br>
                     🌤 ${temp}°C, ${weather}
-                  `;
+                `;
 
-                    document.body.appendChild(weatherBox);
+                document.body.appendChild(weatherBox);
 
-                    weatherBox.querySelector(".close-toast").addEventListener("click", () => {
-                        weatherBox.remove();
-                    });
+                weatherBox.querySelector(".close-toast").addEventListener("click", () => {
+                    weatherBox.remove();
+                });
 
-                    // Auto-remove after 6 seconds (optional if you have the close button)
-                    setTimeout(() => {
-                        weatherBox.remove();
-                    }, 6000);
+                setTimeout(() => {
+                    weatherBox.remove();
+                }, 6000);
+            })
+            .catch(err => {
+                console.error("🌧 Weather API error:", err);
+            });
+    }
 
-
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                showWeather(lat, lon);
+            },
+            async error => {
+                console.warn("⚠️ Geolocation failed, falling back to IP-based location:", error.message);
+                try {
+                    const res = await fetch("https://ipapi.co/json/");
+                    const data = await res.json();
+                    showWeather(data.latitude, data.longitude);
                 } catch (err) {
-                    console.error("Weather fetch failed", err);
+                    console.error("🌐 IP fallback failed:", err);
                 }
             },
-            error => {
-                console.warn("Location access denied.");
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
             }
         );
     } else {
-        console.warn("Geolocation not supported.");
+        console.warn("🚫 Geolocation not supported. Falling back to IP-based location.");
+        fetch("https://ipapi.co/json/")
+            .then(res => res.json())
+            .then(data => showWeather(data.latitude, data.longitude))
+            .catch(err => console.error("🌐 IP fallback failed:", err));
     }
 });
 
