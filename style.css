@@ -366,7 +366,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex: 1;
-    gap: 2rem;
+    gap: 6rem;
     padding: 2rem;
     max-width: 2200px;
     margin: 0 auto;
@@ -401,7 +401,7 @@ header {
 }
 
 .hero-image img {
-    width: 480px;
+    width: 500px;
     height: 490px;
     /* border-radius: 50%; */
     /* object-fit: contain; */
