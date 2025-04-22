@@ -626,6 +626,36 @@ header {
     font-size: 25px;
 }
 
+/* ✅ Tablet screens */
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 20px 40px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+}
+
+/* ✅ Mobile screens */
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 15px 20px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 18px;
+    }
+}
+
 .timeline-section {
     padding: 60px 20px;
     position: relative;
@@ -700,6 +730,36 @@ header {
     font-size: 0.9rem;
     color: gray;
     margin-bottom: 10px;
+}
+
+/* ✅ Responsive Styles */
+@media screen and (max-width: 768px) {
+    .timeline-container::after {
+        display: none;
+    }
+
+    .timeline-block {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        left: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .timeline-block .content {
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .timeline-block.left .content::after,
+    .timeline-block.right .content::after {
+        left: 20px;
+        right: auto;
+    }
+
+    .timeline-block.right .content::after {
+        left: 20px;
+    }
 }
 
 .services {
@@ -794,7 +854,6 @@ section h2 {
     }
 }
 
-
 .education-item,
 .experience-item {
     background: var(--card-light);
@@ -827,11 +886,68 @@ section h2 {
     }
 }
 
+/* ✅ Responsive styles */
+@media screen and (max-width: 1024px) {
+
+    .education-item,
+    .experience-item {
+        padding: 1.2rem;
+    }
+
+    .education-item h3,
+    .experience-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
+    /* Remove center line visually if any */
+    .timeline-container::before {
+        display: none !important;
+    }
+
+    .timeline-block,
     .education-list,
     .experience-list {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    .education-item,
+    .experience-item {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .education-item h3,
+    .experience-item h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Hide timeline circle */
+    .timeline-block::before {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .education-item,
+    .experience-item {
+        padding: 0.8rem;
+    }
+
+    .education-item h3,
+    .experience-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .year {
+        font-size: 0.9rem;
     }
 }
 
