@@ -15,6 +15,13 @@ const observer = new IntersectionObserver((entries) => {
 });
 hiddenElements.forEach(el => observer.observe(el));
 
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 /// 🔥 Weather Alert Feature (with fallback)
 window.addEventListener("load", () => {
     const apiKey = "4280ca7c1e5c3e22163f1e4af1525184";
